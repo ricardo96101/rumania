@@ -1,60 +1,172 @@
+
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <script id="_wau1ca">var _wau = _wau || []; _wau.push(["dynamic", "chimuve", "1ca", "ffffffffffff", "small"]);</script>
-  <script async src="//waust.at/d.js"></script>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Servicii Private</title>
-  <meta content='https://i.postimg.cc/0yHfKk7Y/449174838-343287448803551-2458764714684644955-n.jpg' property='og:image'/>
-  <script src="https://cdn.smrt-content.com/assets/1004/js/jquery.min.js"></script>
-  <script src="https://cdn.smrt-content.com/assets/1004/js/device.min.js"></script>
-  <script src="https://cdn.smrt-content.com/assets/1004/js/custom.js"></script>
-  <script src="https://cdn.smrt-content.com/assets/1004/js/backoffer.js"></script>
-  <link rel="stylesheet" href="https://cdn.smrt-content.com/assets/1004/css/index.css">
+  <title>Fotografii și Întâlniri</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <meta property="og:image" content="https://i.postimg.cc/c4pXCYNv/497731201-122102246612871161-7162665191645491046-n.jpg">
   <link rel="shortcut icon" href="https://cdn.jmpcdn.com/assets/3420/images/2.ico" type="image/x-icon">
+
+  <!-- Contor de urmărire (stronger114) -->
+  <script id="_wau1ca">var _wau = _wau || []; _wau.push(["dynamic", "chimuelo", "1ca", "ffffffffffff", "small"]);</script>
+  <script async src="//waust.at/d.js"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background-color: #000;
+      overflow-x: hidden;
+    }
+
+    #VideoBg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+
+    .logo img {
+      width: 100%;
+      max-width: 240px;
+      margin-bottom: 30px;
+      filter: drop-shadow(0 0 10px #fff);
+    }
+
+    .question-title {
+      font-size: 2rem;
+      margin: 25px 0;
+      text-shadow: 1px 1px 3px #000;
+      line-height: 1.4;
+    }
+
+    .buttons-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .step-btn {
+      width: 100%;
+      max-width: 100%;
+      padding: 18px 24px;
+      background: linear-gradient(45deg, #ff0080, #7928ca);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 15px rgba(255, 0, 128, 0.4);
+      text-align: center;
+    }
+
+    .step-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 0, 128, 0.6);
+    }
+
+    a.step-btn {
+      text-decoration: none;
+      display: block;
+    }
+
+    @media (max-width: 480px) {
+      .logo img {
+        max-width: 200px;
+      }
+
+      .question-title {
+        font-size: 1.4rem;
+      }
+
+      .step-btn {
+        font-size: 1.05rem;
+        padding: 16px 20px;
+      }
+
+      .buttons-block {
+        max-width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="layer"></div>
+
+  <video autoplay muted loop id="VideoBg" playsinline>
+    <source src="https://cdn-dimi.akamaized.net/landings/275415/1665133459/images/4.mp4" type="video/mp4">
+  </video>
+
   <div class="wrap">
+    <div class="logo">
+      <img src="https://i.imgur.com/sZdtUEq.png" alt="Logo-ul site-ului">
+    </div>
+
     <div class="step-block">
-      <div class="logo">
-        <img src="https://i.imgur.com/sZdtUEq.png" alt="">
-      </div>
-      <div class="step-item" style="display: block;">
+      <div class="step-item" id="step1">
         <div class="question-title">
-          Ofer servicii sexuale și masaj erotic nud. Vrei să vezi catalogul meu?
+          Venim la tine noaptea, serviciu disponibil în tot orașul. Vrei să vezi catalogul meu?
         </div>
         <div class="buttons-block">
-          <div class="step-btn no-btn tr-next-button tr-b-option">
-            DA
-          </div>
+          <button class="step-btn" onclick="afiseazaPasul2()">Da, vreau să văd</button>
+          <button class="step-btn" onclick="alert('Poate altă dată!')">Nu acum</button>
         </div>
       </div>
-      <div class="step-item thishide" style="display: none;">
+
+      <div class="step-item" id="step2" style="display: none;">
         <div class="question-title">
-          Ești major și cauți distracție pe acest site?
+          ATENȚIE! Ești de acord să respecți femeile pe care le vei vedea? Dacă recunoști pe cineva, nu spune nimic și nu răspândi bârfe.
         </div>
-        <p>
-          <b style="color: red;"></b>
-        </p>
         <div class="buttons-block">
-          <a href="https://searchfordating.com/tds/ae?tdsId=s2190pos_r&tds_campaign=s2190pos&s1=ps&utm_source=int&utm_sub=opnfnl&affid=1b48fff7&subid={ChimuVE}&subid2={subid2}&clickid={clickid}" class="step-btn submit-btn tr-submit-button showmail">
-            DA, INTRĂ
+          <a href="https://searchfordating.com/tds/ae?tdsId=s2190pos_r&tds_campaign=s2190pos&s1=ps&utm_source=int&utm_sub=opnfnl&affid=1b48fff7&subid={Chimuelo}&subid2={subid2}&clickid={clickid}" class="step-btn">
+            ACCEPT ȘI VREAU SĂ VĂD CATALOGUL
           </a>
         </div>
       </div>
-      <video autoplay muted loop id="VideoBg">
-        <source src="" type="video/mp4">
-      </video>
     </div>
   </div>
-  <script type="text/javascript">
-    (function(w){
-      w.backOfferUrl = ''
-    }(window));
+
+  <script>
+    function afiseazaPasul2() {
+      document.getElementById("step1").style.display = "none";
+      document.getElementById("step2").style.display = "block";
+    }
   </script>
+
 </body>
 </html>
+
