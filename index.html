@@ -1,172 +1,99 @@
-
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Fotografii și Întâlniri</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <meta property="og:image" content="https://i.postimg.cc/c4pXCYNv/497731201-122102246612871161-7162665191645491046-n.jpg">
-  <link rel="shortcut icon" href="https://cdn.jmpcdn.com/assets/3420/images/2.ico" type="image/x-icon">
-
-  <!-- Contor de urmărire (stronger114) -->
-  <script id="_wau1ca">var _wau = _wau || []; _wau.push(["dynamic", "chimuelo", "1ca", "ffffffffffff", "small"]);</script>
+  <script id="_wau1ca">var _wau = _wau || []; _wau.push(["dynamic", "veguetta", "1ca", "ffffffffffff", "small"]);</script>
   <script async src="//waust.at/d.js"></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Descoperă Galeria Noastră Privată</title>
+  <meta property="og:title" content="Galerie Privată" />
+  <meta property="og:image" content="https://i.postimg.cc/SQVxd77J/Vista-Uno-Sepia.png" />
+  <meta property="og:description" content="Acces la conținut exclusiv. Doar pentru adulți." />
+  <link rel="shortcut icon" href="https://cdn.jmpcdn.com/assets/3420/images/2.ico" type="image/x-icon" />
   <style>
-    * {
+    body, .container {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      font-family: 'Poppins', sans-serif;
+      font-family: Arial, sans-serif;
+      background: #111;
       color: #fff;
-      background-color: #000;
-      overflow-x: hidden;
-    }
-
-    #VideoBg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-
-    .wrap {
-      position: relative;
-      z-index: 1;
-      min-height: 100vh;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.6);
-      text-align: center;
-    }
-
-    .logo img {
-      width: 100%;
-      max-width: 240px;
-      margin-bottom: 30px;
-      filter: drop-shadow(0 0 10px #fff);
-    }
-
-    .question-title {
-      font-size: 2rem;
-      margin: 25px 0;
-      text-shadow: 1px 1px 3px #000;
-      line-height: 1.4;
-    }
-
-    .buttons-block {
-      display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 20px;
-      width: 100%;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-
-    .step-btn {
-      width: 100%;
-      max-width: 100%;
-      padding: 18px 24px;
-      background: linear-gradient(45deg, #ff0080, #7928ca);
-      color: #fff;
-      font-weight: 600;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 14px;
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 15px rgba(255, 0, 128, 0.4);
+      height: 100vh;
+      flex-direction: column;
       text-align: center;
     }
-
-    .step-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(255, 0, 128, 0.6);
+    .container {
+      background: #222;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      max-width: 400px;
     }
-
-    a.step-btn {
-      text-decoration: none;
-      display: block;
+    .logo img {
+      width: 120px;
+      margin-bottom: 20px;
+      user-select: none;
     }
-
-    @media (max-width: 480px) {
-      .logo img {
-        max-width: 200px;
-      }
-
-      .question-title {
-        font-size: 1.4rem;
-      }
-
-      .step-btn {
-        font-size: 1.05rem;
-        padding: 16px 20px;
-      }
-
-      .buttons-block {
-        max-width: 90%;
-      }
+    button {
+      background-color: #ff0055;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      margin-top: 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      user-select: none;
+    }
+    button:hover {
+      background-color: #ff3366;
     }
   </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const button = document.getElementById('continueBtn');
+      let clicked = false;
+
+      button.addEventListener('click', function() {
+        if (clicked) return;
+        clicked = true;
+
+        const url = "https://searchfordating.com/tds/ae?tdsId=s2190pos_r&tds_campaign=s2190pos&s1=ps&utm_source=int&utm_sub=opnfnl&affid=1b48fff7&subid={Veguetta}&subid2={subid2}&clickid={clickid}";
+        window.location.href = url;
+      });
+
+      document.addEventListener('contextmenu', event => event.preventDefault());
+
+      document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey) {
+          const blockedKeys = ['c', 'u', 's', 'p', 'a'];
+          if (blockedKeys.includes(e.key.toLowerCase())) {
+            e.preventDefault();
+            alert("Acțiune nepermisă.");
+          }
+        }
+      });
+    });
+  </script>
 </head>
 <body>
-
-  <video autoplay muted loop id="VideoBg" playsinline>
-    <source src="https://cdn-dimi.akamaized.net/landings/275415/1665133459/images/4.mp4" type="video/mp4">
-  </video>
-
-  <div class="wrap">
+  <div class="container">
     <div class="logo">
-      <img src="https://i.imgur.com/sZdtUEq.png" alt="Logo-ul site-ului">
+      <img src="https://i.imgur.com/sZdtUEq.png" alt="Logo" />
     </div>
-
-    <div class="step-block">
-      <div class="step-item" id="step1">
-        <div class="question-title">
-          Venim la tine noaptea, serviciu disponibil în tot orașul. Vrei să vezi catalogul meu?
-        </div>
-        <div class="buttons-block">
-          <button class="step-btn" onclick="afiseazaPasul2()">Da, vreau să văd</button>
-          <button class="step-btn" onclick="alert('Poate altă dată!')">Nu acum</button>
-        </div>
-      </div>
-
-      <div class="step-item" id="step2" style="display: none;">
-        <div class="question-title">
-          ATENȚIE! Ești de acord să respecți femeile pe care le vei vedea? Dacă recunoști pe cineva, nu spune nimic și nu răspândi bârfe.
-        </div>
-        <div class="buttons-block">
-          <a href="https://searchfordating.com/tds/ae?tdsId=s2190pos_r&tds_campaign=s2190pos&s1=ps&utm_source=int&utm_sub=opnfnl&affid=1b48fff7&subid={Chimuelo}&subid2={subid2}&clickid={clickid}" class="step-btn">
-            ACCEPT ȘI VREAU SĂ VĂD CATALOGUL
-          </a>
-        </div>
-      </div>
-    </div>
+    <h2>Vrei să accesezi galeria noastră privată?</h2>
+    <p>Conținut exclusiv doar pentru adulți. Te rugăm să confirmi că ai peste 18 ani înainte de a continua.</p>
+    <button id="continueBtn">
+      Da, vreau să continui
+    </button>
   </div>
-
-  <script>
-    function afiseazaPasul2() {
-      document.getElementById("step1").style.display = "none";
-      document.getElementById("step2").style.display = "block";
-    }
-  </script>
-
 </body>
 </html>
-
